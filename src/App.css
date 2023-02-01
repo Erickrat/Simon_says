@@ -1,0 +1,214 @@
+body {
+  background: rgb(231, 231, 231);
+  background: linear-gradient(77deg, rgba(231, 231, 231, 1) 0%, rgba(196, 197, 203, 1) 100%);
+}
+
+.message {
+  margin: 0 auto;
+  font-family: 'Spline Sans Mono';
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 10px;
+  width: 50%;
+  height: auto;
+}
+
+.message.correct {
+  border: 2px solid rgba(6, 146, 1, 0.301);
+  color: #2f800c;
+  background-color: rgba(6, 146, 1, 0.301);
+}
+
+.message.lose {
+  border: 2px solid rgba(146, 1, 1, 0.301);
+  color: #8d0000;
+  background-color: rgba(146, 1, 1, 0.301);
+}
+
+.container {
+  height: 400px;
+  width: 400px;
+  border: solid 1px;
+  margin: 3% auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  background-color: rgb(15, 15, 15);
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.73);
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.73);
+  -moz-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.73);
+}
+
+.score {
+  /* border: 1px solid black; */
+  background-color: rgb(15, 15, 15);
+  width: 175px;
+  height: 175px;
+  z-index: 1;
+  position: absolute;
+  border-radius: 50%;
+  margin: 112.5px auto;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.73);
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.73);
+  -moz-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.73);
+}
+
+button {
+  height: 45%;
+  max-width: 300px;
+  min-width: 45%;
+  padding: 20px;
+  line-height: 0;
+  border: solid 3px rgba(214, 214, 214, 0.089);
+  /* shape */
+  border-top-right-radius: 100%;
+  flex: none;
+  display: flex;
+  margin: 5px;
+}
+
+button.yellow {
+  background-color: rgb(34, 34, 0);
+  rotate: 270deg;
+
+}
+
+button.yellow.active {
+  background-color: rgb(219, 235, 0);
+  box-shadow: 0px 0px 43px 6px rgba(46, 51, 0, 0.76) inset;
+  -webkit-box-shadow: 0px 0px 43px 6px rgba(46, 51, 0, 0.76) inset;
+  -moz-box-shadow: 0px 0px 43px 6px rgba(46, 51, 0, 0.76) inset;
+}
+
+button.red {
+  background-color: rgb(34, 0, 0);
+  rotate: 0deg;
+
+}
+
+button.red.active {
+  background-color: rgb(226, 0, 0);
+  box-shadow: 0px 0px 43px 6px rgba(66, 0, 0, 0.76) inset;
+  -webkit-box-shadow: 0px 0px 43px 6px rgba(66, 0, 0, 0.76) inset;
+  -moz-box-shadow: 0px 0px 43px 6px rgba(66, 0, 0, 0.76) inset;
+}
+
+button.green {
+  background-color: rgb(0, 34, 0);
+  rotate: 90deg;
+
+}
+
+button.green.active {
+  background-color: rgb(0, 223, 0);
+  box-shadow: 0px 0px 43px 6px rgba(0, 56, 0, 0.76) inset;
+  -webkit-box-shadow: 0px 0px 43px 6px rgba(0, 56, 0, 0.76) inset;
+  -moz-box-shadow: 0px 0px 43px 6px rgba(0, 56, 0, 0.76) inset;
+}
+
+button.blue {
+  background-color: rgb(0, 0, 34);
+  rotate: 180deg;
+
+}
+
+button.blue.active {
+  background-color: rgb(0, 0, 211);
+  box-shadow: 0px 0px 43px 6px rgba(34, 0, 17, 0.76) inset;
+  -webkit-box-shadow: 0px 0px 43px 6px rgba(34, 0, 17, 0.76) inset;
+  -moz-box-shadow: 0px 0px 43px 6px rgba(34, 0, 17, 0.76) inset;
+}
+
+.display {
+  font-family: "VT323";
+  text-align: center;
+  color: rgb(107, 107, 107);
+  height: 24px;
+  margin: 40px 40px 0px 40px;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 10%;
+  background-color: rgba(107, 107, 107, 0.99);
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.76) inset;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.76) inset;
+  -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.76) inset;
+}
+
+.display.activate {
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 6px 5px rgba(66, 66, 66, 0.73) inset;
+  -webkit-box-shadow: 0px 0px 6px 5px rgba(66, 66, 66, 0.73) inset;
+  -moz-box-shadow: 0px 0px 6px 5px rgba(66, 66, 66, 0.73) inset;
+  /* margin-top: 30px; */
+
+}
+
+.level-box {
+  font-family: 'Spline Sans Mono';
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(128, 128, 128, 0.5);
+  text-align: center;
+  margin-top: 18px;
+}
+
+.level-number {
+  border: 1px solid wheat;
+  margin: 10px 60px 0px 60px;
+  padding: 8px;
+  border: 1px solid green;
+  background: rgb(4, 64, 0);
+  background: rgba(4, 64, 0, 1);
+  box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.75) inset;
+  font-family: "VT323";
+  font-size: 24px;
+  color: #3a9c0f;
+  text-align: center;
+  border-radius: 8%;
+}
+
+.game-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Spline Sans Mono';
+  font-weight: bolder;
+  margin-top: 50px;
+}
+
+.new-game {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Spline Sans Mono';
+  font-weight: bolder;
+  margin-top: 50px;
+}
+
+.start {
+  height: 45px;
+  min-width: 100px;
+  background-color: rgba(14, 3, 77, 0.164);
+  border: 1px solid rgba(14, 3, 77, 0.5);
+  line-height: 4px;
+  text-align: center;
+  padding: -20px;
+  /* shape */
+  border-top-right-radius: 0;
+  border-radius: 4px;
+  margin: 80px auto;
+  display: block;
+}
+
+.record {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Spline Sans Mono';
+  font-weight: bolder;
+  margin-top: 50px;
+}
